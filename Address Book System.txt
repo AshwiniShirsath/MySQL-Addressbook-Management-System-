@@ -64,5 +64,47 @@ mysql> desc AddressBook;
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.36 sec)
 
-mysql> 
+mysql> insert into AddressBook (firstname, lastname, address,city, state, zip,phoneNumber,email) values
+    -> ('Ashwini','Shirsath','Tulsi Nagar','Nandurbar','Maharashtra',425409,7098203002,'ash@gmail.com');
+Query OK, 1 row affected (0.46 sec)
+
+mysql> insert into AddressBook (firstname, lastname, address,city, state, zip,phoneNumber,email) values
+    -> ('Harshal','Nikumbe','Taloda','Dhule','Maharashtra',425409,7020982232,'harsh@gmail.com');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into AddressBook (firstname, lastname, address,city, state, zip,phoneNumber,email) values
+    -> ('Sadanand','Pandey','Patana','Ethawa','Bihar',425565,9665588774,'@sandygmail.com');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into AddressBook (firstname, lastname, address,city, state, zip,phoneNumber,email) values
+    -> ('Harshada','Lohar','Shirud','Dhule','Maharashtra',425787,8978546521,'@harshu@gamil.com');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstName   | varchar(20)  | NO   |     | NULL    |       |
+| lastName    | varchar(20)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | int          | NO   |     | NULL    |       |
+| phoneNumber | double       | NO   |     | NULL    |       |
+| email       | varchar(100) | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.04 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+-------------+-----------+-------------+--------+-------------+-------------------+
+| firstName | lastName | address     | city      | state       | zip    | phoneNumber | email             |
++-----------+----------+-------------+-----------+-------------+--------+-------------+-------------------+
+| Ashwini   | Shirsath | Tulsi Nagar | Nandurbar | Maharashtra | 425409 |  7098203002 | ash@gmail.com     |
+| Harshal   | Nikumbe  | Taloda      | Dhule     | Maharashtra | 425409 |  7020982232 | harsh@gmail.com   |
+| Sadanand  | Pandey   | Patana      | Ethawa    | Bihar       | 425565 |  9665588774 | @sandygmail.com   |
+| Harshada  | Lohar    | Shirud      | Dhule     | Maharashtra | 425787 |  8978546521 | @harshu@gamil.com |
++-----------+----------+-------------+-----------+-------------+--------+-------------+-------------------+
+4 rows in set (0.10 sec)
+
+
 

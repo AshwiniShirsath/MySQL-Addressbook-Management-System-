@@ -146,3 +146,28 @@ mysql> select * from AddressBook where city = 'Nandurbar' or State='Maharashtra'
 +-----------+----------+-------------+-----------+-------------+--------+-------------+-----------------+
 2 rows in set (0.00 sec)
 
+mysql> select count(firstname) from AddressBook where city = 'Dhule';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.09 sec)
+
+mysql> select count(firstname) from AddressBook where city = 'Nashik';
++------------------+
+| count(firstname) |
++------------------+
+|                0 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(firstname) from AddressBook where city = 'Nandurbar';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> 
